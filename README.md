@@ -28,17 +28,33 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 
 **PROGRAM**
+module deexp11[out,clk,rst];
+input clk,rst;
+output reg [3:0]out;
+always [posedge clk]
+begin
+if(rst)
+out<=0;
+else
+out <=out+1;
+end
+endmodule
 
-![WhatsApp Image 2024-12-15 at 10 02 04_79096dea](https://github.com/user-attachments/assets/d28c3037-c24c-4b96-a989-9b73dddd8ba1)
-
-Developed by: RegisterNumber: 24900265
+Developed by: A Chandhna RegisterNumber: 24900265
 */
 
 **RTL LOGIC UP COUNTER**
-![WhatsApp Image 2024-12-15 at 10 02 04_6563818f](https://github.com/user-attachments/assets/b84a794a-fa59-47b2-a059-3ff40e80e07a)
+
+
+![11 rtl](https://github.com/user-attachments/assets/72df8ab7-2655-4f5a-bba5-07af28afdd1f)
+
 
 
 **TIMING DIAGRAM FOR IP COUNTER**
-![WhatsApp Image 2024-12-15 at 10 02 04_aa37a278](https://github.com/user-attachments/assets/38b8ee43-bafb-4987-883c-0ca37ccc432d)
+
+
+![11 td](https://github.com/user-attachments/assets/0beed289-e0bd-467e-82ce-bab1665afc29)
+
 
 **RESULTS**
+Hence a 4 bit synchronous up counter is implemented correctly.
